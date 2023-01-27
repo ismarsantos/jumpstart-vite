@@ -1,0 +1,18 @@
+
+default: &default
+  adapter: postgresql
+  host: localhost
+  username: diamantina
+  password: diamantina
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: utf-8
+  template: template0
+
+development:
+  <<: *default
+  database: jumpstart_vite_development
+
+test:
+  <<: *default
+  database: jumpstart_vite_test
+
