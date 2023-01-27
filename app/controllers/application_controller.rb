@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
-  include Pundit
+  include Pundit::Authorization
 
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :masquerade_user!
+  # before_action :masquerade_user!
 
   protected
 

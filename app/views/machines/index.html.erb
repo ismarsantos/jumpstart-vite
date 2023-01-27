@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Machines</h1>
+
+<%= turbo_stream_from('machines') %>
+
+<div id="machines">
+  <% @machines.each do |machine| %>
+    <%= turbo_stream_from(machine) %>
+    <%= render machine %>
+  <% end %>
+</div>
+
+<%= link_to "New machine", new_machine_path %>

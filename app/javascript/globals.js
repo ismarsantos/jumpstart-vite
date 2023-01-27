@@ -1,6 +1,6 @@
 import jQuery from 'jquery'
-import Rails from '@rails/ujs'
+import { FetchRequest } from '@rails/request.js'
 
-Object.assign(window, { $: jQuery, jQuery, Rails })
+Object.assign(window, { $: jQuery, jQuery, FetchRequest })
 
-try { Rails.start() } catch { }
+try { FetchRequest.start() } catch { }
